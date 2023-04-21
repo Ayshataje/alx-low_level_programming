@@ -1,31 +1,18 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- * main - Prints all possible combinations of two different digits,
- *        in ascending order, separated by a comma followed by a space.
- *
- * Return: Always 0.
+ * main - Entry point
+ * Description: prints the alphabet in lowercase\n
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int digit1, digit2;
+	int ch;
 
-	for (digit1 = 0; digit1 < 9; digit1++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
-		{
-			putchar((digit1 % 10) + '0');
-			putchar((digit2 % 10) + '0');
-
-			if (digit1 == 8 && digit2 == 9)
-				continue;
-			putchar(',');
-			putchar(' ');
-		}
+		putchar(ch);
 	}
-
 	putchar('\n');
-
-	return (0);
+return (0);
 }
-
